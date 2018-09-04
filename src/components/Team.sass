@@ -1,0 +1,98 @@
+@import './Vars.sass'
+    
+.Team
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    
+    
+
+    &__title
+        //width: 80%
+        margin-bottom: 40px
+
+    &__wrap
+        //width: 80%
+        display: grid
+        //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+        grid-gap: 40px
+
+    &__card
+        position: relative
+        width: 262px
+        height: 300px
+        transition: all .3s ease-in-out
+        
+
+        &:hover, &:focus
+
+            .Team__overlay
+                opacity: 1
+
+                &__icons
+                    transform: translateY(0%)
+                    opacity: 1
+
+            .Team__card__desc
+                background: $gray-dark
+                
+                h6, span
+                    color: #ccc
+
+        
+
+        &__desc
+            position: relative
+            padding: 20px
+            background: $gray
+            width: 263px
+            height: auto
+            bottom: 5px
+            z-index: 100
+            transition: all .3s ease-in-out
+
+            span
+                color: gray
+                font-size: .8em
+
+    &__overlay
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba($gray, .5)
+        display: flex
+        justify-content: center
+        opacity: 0
+        transition: opacity .3s ease-in-out
+
+        &__icons
+            display: flex
+            justify-content: center
+            align-items: center
+            transform: translateY(10%)
+            transition: all .3s ease-in-out
+            transition-delay: .3s
+            opacity: 0
+
+        a
+            width: 40px
+            height: 40px
+            background: $gray-dark
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 1px
+            
+
+            &:hover, &:focus
+                background: lighten($gray-dark, 10%)
+
+            &:last-child
+                margin-right: 0
+            
+
+
+            

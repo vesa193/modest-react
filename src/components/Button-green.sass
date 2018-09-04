@@ -1,0 +1,28 @@
+@import './Vars.sass'
+
+.button1
+    padding: 5px 10px
+    border: 2px solid $gray
+    border-radius: 5px
+    text-align: center
+    color: $gray
+
+    &:hover, &:focus 
+        background: $green
+        color: white
+        border: 2px solid $green
+
+
+.button2
+    padding: 5px 10px
+    border: 2px solid $green
+    border-radius: 5px
+    text-align: center
+    background: $green
+    color: white
+
+    &:hover, &:focus 
+        background: lighten($green, 10%)
+        color: white
+        border: 2px solid lighten($green, 10%)
+
